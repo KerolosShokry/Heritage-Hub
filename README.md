@@ -1,3 +1,6 @@
-## Contributors
-Html - [Kerolos Shokry](https://github.com/KerolosShokry)
-CSS  - [Haidy Emad](https://github.com/haidyemadeldinuni-png)
+### **Project Contributors**
+
+* **Kerolos Shokry**: Backend Development & HTML
+* **Haidy Emad**: Frontend Design & CSS
+* **Mariam Ahmed**: Data Research & Information Collection
+* **Nouran Bahaa**: Data Research & Information Collection
