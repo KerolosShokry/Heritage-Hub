@@ -1,36 +1,19 @@
-function showSection(sectionId) {
-    const sections = document.querySelectorAll('.page-section');
-    sections.forEach(section => {
-        section.style.display = 'none';
-        section.classList.remove('active');
-    });
-
-    const targetSection = document.getElementById(sectionId);
-    if (targetSection) {
-        targetSection.style.display = 'block';
-        targetSection.classList.add('active');
-        window.scrollTo({ top: 0, left: 0 });
-    }
-    toggleHomeButton(sectionId);
-}
-
-function toggleHomeButton(sectionId) {
-    const button = document.getElementById('home-nav-btn');
-    if (!button) return;
-    button.style.display = (sectionId === 'home' || sectionId === 'places') ? 'none' : 'inline-flex';
-}
-
 function addScrollAnimations() {
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('fade-in');
+                entry.target.classList.remove('scroll-hidden');
+                observer.unobserve(entry.target);
             }
         });
-    }, { threshold: 0.1 });
+    }, { threshold: 0.15 });
 
-    const elements = document.querySelectorAll('.page-section, .page-section section');
-    elements.forEach(el => observer.observe(el));
+    const elements = document.querySelectorAll('main section, .hero-copy, .section-title, .section-subtitle, .civilization-content, .story-block');
+    elements.forEach(el => {
+        el.classList.add('scroll-hidden');
+        observer.observe(el);
+    });
 }
 
 function videoEffects() {
@@ -45,8 +28,6 @@ function videoEffects() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    const sectionId = window.location.hash ? window.location.hash.substring(1) : 'home';
-    showSection(sectionId);
     addScrollAnimations();
     videoEffects();
 });

@@ -5,636 +5,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Heritage Hub - Egypt's Historical Sites</title>
     <link rel="icon" type="image/png" href="./Assets/favicon.ico">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="home.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="./logo.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="./logo.ico">
+    <link rel="apple-touch-icon" href="./logo.ico">
 </head>
 <body>
     <video autoplay muted loop id="bg-video">
         <source src="vid01.mp4" type="video/mp4">
     </video>
     <div class="page-overlay"></div>
-    <button id="home-nav-btn" class="hero-btn right-home-btn" onclick="showSection('home')">Home</button>
 
-    <header id="home" class="site-header page-section">
-        <div class="topbar">
-            <div class="logo">Heritage Hub</div>
-            <nav class="top-nav">
-                <a href="#home" onclick="showSection('home')">Home</a>
-                <a href="#places" onclick="showSection('places')">Places</a>
-                <a href="#about" onclick="showSection('about')">About</a>
-                <a href="#contact" onclick="showSection('contact')">Contact</a>
-            </nav>
+<header id="home" class="site-header page-section active">
+    <div class="topbar">
+        <div class="logo">
+            <a href="index.html" class="logo-link">
+                <img src="./logo.ico" alt="Heritage Hub Logo" class="site-logo">
+                <span class="logo-text">Heritage Hub</span>
+            </a>
         </div>
-        <div class="hero-content hero-single">
-            <div class="hero-copy">
-                <br>
-                <br>
-                <br>
-                <span class="hero-label">Here and now</span>
-                <br>
+
+        <nav class="top-nav">
+            <a href="index.html">Home</a>
+            <a href="places.html">Places</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </div>
+
+    <div class="hero-content hero-single">
+        <div class="hero-copy">
+            <br><br><br>
+            <span class="hero-label">Here and now</span>
+            <br>
+            <div class="hero-title-wrapper">
                 <h1 class="hero-title"><span>M</span>AJESTY</h1>
-                <p class="hero-text">Explore Egypt’s timeless legacy through a modern experience built for curious travelers and heritage lovers.</p>
-                <br>
-                <br>
-                <a class="hero-btn" href="#places" onclick="showSection('places')">Explore</a>
+                <h2 class="hero-title-overlay">majesty</h2>
             </div>
+            <p class="hero-text">Explore Egypt’s timeless legacy through a modern experience built for curious travelers and heritage lovers.</p>
+            <br><br>
+            <a class="hero-btn" href="places.html">Explore</a>
         </div>
-    </header>
+    </div>
+</header>
 
     <main>
-        <div class="sections-container">
-            <section id="places" class="page-section" style="display:none;">
-                <div class="places-hero">
-                    <div class="places-copy">
-                        <span class="hero-label">Explore</span>
-                        <h1>Discover Egypt’s Greatest Museums</h1>
-                        <p>Navigate through iconic heritage destinations with crisp descriptions, easy access and a modern layout designed for travelers and culture seekers.</p>
-                        <a class="hero-btn" href="#home" onclick="showSection('home')">Back to Home</a>
+        <section class="civilization-section active">
+            <div class="civilization-container">
+                <h2 class="section-title">The Greatness of Egyptian Civilization</h2>
+                <p class="section-subtitle">A Legacy That Spans Over 5,000 Years</p>
+                
+                <div class="civilization-content narrative-content">
+                    <div class="story-block">
+                        <p>From the first stones laid by the builders of the pyramids, Egypt began a story that stretches across millennia. This is a tale of Pharaohs whose temples and monuments still speak in silence, of hieroglyphs that turned stone into language, and of artisans who shaped beauty, science, and belief into a civilization that inspired the world. As the centuries flowed, Egypt embraced new chapters. The Coptic era transformed the land into a center of early Christianity, where monks in the desert and churches in Alexandria held fast to ancient knowledge even as they opened their doors to a new faith. Coptic art and scripture became the bridge between the old world of gods and the new world of saints. The Arab conquest brought another great chapter, and Islamic Egypt rose to become a hub of learning and architecture. Cairo glittered with mosques and palaces, while Al-Azhar became a beacon for scholars. Mathematics, medicine, astronomy and philosophy all found fertile ground along the Nile, blending Egyptian heritage with the wider Islamic world. In modern times, Egypt’s story became one of independence and ambition. The nation rose from Ottoman rule through revolution, building the Aswan High Dam, reclaiming the Suez Canal, and creating a new capital for the twenty-first century. Each era added its own voice, but all of them are part of the same great current that flows through the Nile. Every artifact, every monument, and every sacred text is part of one continuous narrative. Egypt’s heritage matters not just because it is ancient, but because it shows how one land carried its past forward, transformed its present, and still dreams of what comes next.</p>
                     </div>
                 </div>
-
-                <div class="places-grid">
-                    <article class="place-card">
-                        <img class="place-card-image" src="./pic000.jpeg" alt="National Museum of Egyptian Civilization">
-                        <div>
-                            <h3>THE NATIONAL MUSEUM OF EGYPTIAN CIVILIZATION</h3>
-                            <p>Modern cultural museum in Old Cairo with royal mummies and 50,000 artifacts from ancient Egypt to the present.</p>
-                        </div>
-                        <button class="place-btn" onclick="showSection('nmec')">View Details</button>
-                    </article>
-
-                    <article class="place-card">
-                        <img class="place-card-image" src="./pic0000.jpeg" alt="Sharm El Sheikh Museum">
-                        <div>
-                            <h3>SHARM EL SHEIKH MUSEUM</h3>
-                            <p>South Sinai museum presenting ancient Egyptian civilization and the unique heritage of the Sinai region.</p>
-                        </div>
-                        <button class="place-btn" onclick="showSection('sharm')">View Details</button>
-                    </article>
-
-                    <article class="place-card">
-                        <img class="place-card-image" src="./pic08.jpeg" alt="The Egyptian Museum">
-                        <div>
-                            <h3>The Egyptian Museum</h3>
-                            <p>Historic Cairo museum near Tahrir Square, home to one of the world’s richest collections of Pharaonic treasures.</p>
-                        </div>
-                        <button class="place-btn" onclick="showSection('egyptian')">View Details</button>
-                    </article>
-
-                    <article class="place-card">
-                        <img class="place-card-image" src="./pic07.jpeg" alt="Grand Egyptian Museum">
-                        <div>
-                            <h3>The Grand Egyptian Museum (GEM)</h3>
-                            <p>World-class new museum showcasing the complete Tutankhamun collection and monumental artifacts in a modern setting.</p>
-                        </div>
-                        <button class="place-btn" onclick="showSection('gem')">View Details</button>
-                    </article>
-
-                    <article class="place-card">
-                        <img class="place-card-image" src="./pic06.jpeg" alt="Luxor Museum">
-                        <div>
-                            <h3>The Luxor Museum</h3>
-                            <p>Elegant regional museum on the Nile Corniche displaying rare objects from the temples and tombs of ancient Thebes.</p>
-                        </div>
-                        <button class="place-btn" onclick="showSection('luxor')">View Details</button>
-                    </article>
-
-                    <article class="place-card">
-                        <img class="place-card-image" src="./pic0.jpeg" alt="Museum of Islamic Art">
-                        <div>
-                            <h3>The Museum of Islamic Art</h3>
-                            <p>Largest Islamic art museum in the world, presenting treasures from Egypt, the Arabian Peninsula, Andalusia and beyond.</p>
-                        </div>
-                        <button class="place-btn" onclick="showSection('islamic')">View Details</button>
-                    </article>
-
-                    <article class="place-card">
-                        <img class="place-card-image" src="./pic00.jpeg" alt="The Coptic Museum">
-                        <div>
-                            <h3>The Coptic Museum</h3>
-                            <p>Unique collection of Coptic manuscripts, icons, woodwork and ancient religious art housed in Old Cairo.</p>
-                        </div>
-                        <button class="place-btn" onclick="showSection('coptic')">View Details</button>
-                    </article>
-
-                    <article class="place-card">
-                        <img class="place-card-image" src="./pic09.jpeg" alt="Alexandria National Museum">
-                        <div>
-                            <h3>Alexandria National Museum</h3>
-                            <p>Modern museum in Alexandria displaying ancient artifacts, royal statues and the city’s Mediterranean heritage.</p>
-                        </div>
-                        <button class="place-btn" onclick="showSection('alexandria')">View Details</button>
-                    </article>
-                </div>
-            </section>
-
-            <section id="nmec" class="page-section" style="display:none;">
-                <button class="back-btn" onclick="showSection('places')">← Back to Places</button>
-                <h1>THE NATIONAL MUSEUM OF EGYPTIAN CIVILIZATION</h1>
-                <hr>
-                <section>
-                    <h2>General Information</h2>
-                    <p>National Museum of Egyptian Civilization is a major museum in Cairo that showcases around 50,000 artifacts covering Egypt’s history from prehistoric times to the present. Located in Old Cairo overlooking Ain El Sira Lake, it features a wide range of items including manuscripts, paintings, and antiquities. The museum officially opened on April 3, 2021, marked by the famous Pharaohs’ Golden Parade, when 22 royal mummies were moved there from the Egyptian Museum.</p>
-                </section>
-
-                <section>
-                    <h2>Visitor Details & Ticket Prices (2026)</h2>
-                    <h3>Entry Tickets</h3>
-                    <table border="1" cellpadding="12" cellspacing="0" width="100%">
-                        <thead>
-                            <tr bgcolor="#2c3e50" style="color: white;">
-                                <th>Category</th>
-                                <th>Foreigners</th>
-                                <th>Egyptians</th>
-                            </tr>
-                        </thead>
-                        <tbody align="center">
-                            <tr>
-                                <td><b>Adults</b></td>
-                                <td>550 EGP</td>
-                                <td>90 EGP</td>
-                            </tr>
-                            <tr>
-                                <td><b>Students</b></td>
-                                <td>300 EGP</td>
-                                <td>45 EGP</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </section>
-
-                <section>
-                    <h2>Opening Hours</h2>
-                    <ul>
-                        <li><b>Daily:</b> 09:00 AM to 05:00 PM</li>
-                        <li><b>Note:</b> Tickets office closes at 04:00 PM.</li>
-                    </ul>
-                </section>
-
-                <hr>
-
-                <section>
-                    <h2>Official Booking</h2>
-                    <p>To book your tickets, please visit the official website: <a href="https://egymonuments.com/nmec/tickets" target="_blank">Click here to book on Egypt Monuments</a></p>
-                </section>
-
-                <section>
-                    <h2>Location</h2>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3454.984639085869!2d31.253110212455123!3d30.008597455670476!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1458476863e39e8f%3A0xc2e058446f8f145d!2z2KfZhNmF2KrYrdmBINin2YTZgtmI2YXZiiDZhNmE2K3Yttin2LHYqSDYp9mE2YXYtdix2YrYqQ!5e0!3m2!1sar!2seg!4v1774193066045!5m2!1sar!2seg" width="600" height="450" style="border:0;" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </section>
-            </section>
-
-            <section id="sharm" class="page-section" style="display:none;">
-                <button class="back-btn" onclick="showSection('places')">← Back to Places</button>
-                <h1>SHARM EL SHEIKH MUSEUM</h1>
-                <hr>
-                <section>
-                    <h2>General Information</h2>
-                    <p>The Sharm El Sheikh Museum is the first Egyptian antiquities museum in South Sinai. Opened in 2020 on Airport Road, it covers an area of 190,000 square meters and displays approximately 5,200 artifacts showcasing ancient Egyptian civilization and the heritage of Sinai. <br> Opening Date: Inaugurated by the President of the Republic in 2020, following the completion of construction that began in 2003 and was interrupted several times. <br> Exhibition Theme: The museum aims to present the history of Egyptian civilization, the relationship between humans and the environment, and the development of sciences and crafts. It includes taxidermied animals (cats, scarabs, and a crocodile) from the Saqqara area.</p>
-                </section>
-
-                <section>
-                    <h2>Visitor Details & Ticket Prices (2026)</h2>
-                    <h3>Entry Tickets</h3>
-                    <table border="1" cellpadding="12" cellspacing="0" width="100%">
-                        <thead>
-                            <tr bgcolor="#2c3e50" style="color: white;">
-                                <th>Category</th>
-                                <th>Foreigners</th>
-                                <th>Egyptians</th>
-                            </tr>
-                        </thead>
-                        <tbody align="center">
-                            <tr>
-                                <td><b>Adults</b></td>
-                                <td>200 EGP</td>
-                                <td>40 EGP</td>
-                            </tr>
-                            <tr>
-                                <td><b>Students</b></td>
-                                <td>100 EGP</td>
-                                <td>20 EGP</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </section>
-
-                <section>
-                    <h2>Opening Hours</h2>
-                    <ul>
-                        <li>The museum is open every day of the week in two shifts:<br>
-                            Morning: From 10:00 AM to 1:00 PM (closes at 12:00 PM).<br>
-                            Evening: From 5:00 PM to 11:00 PM (closes at 10:00 PM).
-                        </li>
-                    </ul>
-                </section>
-
-                <hr>
-
-                <section>
-                    <h2>Official Booking</h2>
-                    <p>To book your tickets, please visit the official website: <a href="https://egymonuments.com/details/SharmElSheikhMuseum" target="_blank">Click here to book on Egypt Monuments</a></p>
-                </section>
-
-                <section>
-                    <h2>Location</h2>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3525.0102860544603!2d34.34831392388054!3d27.93232991553149!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1453379dede99f63%3A0xe6401eff7e5a4c60!2z2YXYqtit2YEg2LTYsdmFINin2YTYtNmK2K4!5e0!3m2!1sar!2seg!4v1774193099779!5m2!1sar!2seg" width="600" height="450" style="border:0;" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </section>
-            </section>
-
-            <section id="egyptian" class="page-section" style="display:none;">
-                <button class="back-btn" onclick="showSection('places')">← Back to Places</button>
-                <h1>The Egyptian Museum</h1>
-                <hr>
-                <section>
-                    <h2>General Information</h2>
-                    <p>The Egyptian Museum in Cairo, located near Tahrir Square, is one of the world’s most famous museums. Established in 1835, it was relocated several times, from Azbakeya Garden to the Citadel, then to Bulaq by Auguste Mariette, before moving to Giza due to flooding. Its current building was opened in 1902 by Gaston Maspero during the reign of Khedive Abbas Helmy II, and it houses over 180,000 artifacts.</p>
-                </section>
-
-                <section>
-                    <h2>Visitor Details & Ticket Prices (2026)</h2>
-                    <h3>Entry Tickets</h3>
-                    <table border="1" cellpadding="12" cellspacing="0" width="100%">
-                        <thead>
-                            <tr bgcolor="#2c3e50" style="color: white;">
-                                <th>Category</th>
-                                <th>Foreigners</th>
-                                <th>Egyptians</th>
-                            </tr>
-                        </thead>
-                        <tbody align="center">
-                            <tr>
-                                <td><b>Adults</b></td>
-                                <td>200 EGP</td>
-                                <td>40 EGP</td>
-                            </tr>
-                            <tr>
-                                <td><b>Students</b></td>
-                                <td>100 EGP</td>
-                                <td>20 EGP</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </section>
-
-                <section>
-                    <h2>Opening Hours</h2>
-                    <ul>
-                        <li><b>Daily:</b> 09:00 AM to 05:00 PM</li>
-                    </ul>
-                </section>
-
-                <section>
-                    <h2>Official Booking</h2>
-                    <p>To book your tickets, please visit the official website: <a href="https://egymonuments.com/details/TheEgyptianMuseum" target="_blank">Click here to book on Egypt Monuments</a></p>
-                </section>
-
-                <section>
-                    <h2>Location</h2>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3454.2791873652225!2d31.23822891535929!3d30.048753499421344!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14583f6530c4d27b%3A0x81a9f4bd2465835c!2sThe%20Egyptian%20Museum!5e0!3m2!1sen!2seg!4v1707000000000" width="600" height="450" style="border:0;" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </section>
-            </section>
-
-            <section id="gem" class="page-section" style="display:none;">
-                <button class="back-btn" onclick="showSection('places')">← Back to Places</button>
-                <h1>The Grand Egyptian Museum (GEM)</h1>
-                <hr>
-                <section>
-                    <h2>General Information</h2>
-                    <p>The Grand Egyptian Museum is a new cultural museum located near Giza, designed as a modern landmark for showcasing royal artifacts and treasures from the Pharaonic era. It features a large collection of statues, sarcophagi, jewelry and the complete Tutankhamun collection in a contemporary exhibition space.</p>
-                </section>
-
-                <section>
-                    <h2>Visitor Details & Ticket Prices (2026)</h2>
-                    <h3>Entry Tickets</h3>
-                    <table border="1" cellpadding="12" cellspacing="0" width="100%">
-                        <thead>
-                            <tr bgcolor="#2c3e50" style="color: white;">
-                                <th>Category</th>
-                                <th>Foreigners</th>
-                                <th>Egyptians</th>
-                            </tr>
-                        </thead>
-                        <tbody align="center">
-                            <tr>
-                                <td><b>Adults</b></td>
-                                <td>350 EGP</td>
-                                <td>60 EGP</td>
-                            </tr>
-                            <tr>
-                                <td><b>Students</b></td>
-                                <td>200 EGP</td>
-                                <td>35 EGP</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </section>
-
-                <section>
-                    <h2>Opening Hours</h2>
-                    <ul>
-                        <li><b>Daily:</b> 10:00 AM to 6:00 PM</li>
-                    </ul>
-                </section>
-
-                <section>
-                    <h2>Official Booking</h2>
-                    <p>For tickets and visiting information, visit the official GEM website: <a href="https://egymonuments.com/details/GrandEgyptianMuseum" target="_blank">Click here to book</a></p>
-                </section>
-
-                <section>
-                    <h2>Location</h2>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3450.6543125699985!2d31.127217415362393!3d29.977285403762994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x145845d4b4ae1b2f%3A0x70df6f0a7c92f3f4!2sGrand%20Egyptian%20Museum!5e0!3m2!1sen!2seg!4v1707000000000" width="600" height="450" style="border:0;" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </section>
-
-            </section>
-
-            <section id="luxor" class="page-section" style="display:none;">
-                <button class="back-btn" onclick="showSection('places')">← Back to Places</button>
-                <h1>The Luxor Museum</h1>
-                <hr>
-                <section>
-                    <h2>General Information</h2>
-                    <p>The Luxor Museum is a cultural museum located on the Nile Corniche in Luxor, displaying artifacts from the Theban temples and the Valley of the Kings. It focuses on local Antiquities from the New Kingdom and the history of Luxor as a major religious center.</p>
-                </section>
-
-                <section>
-                    <h2>Visitor Details & Ticket Prices (2026)</h2>
-                    <h3>Entry Tickets</h3>
-                    <table border="1" cellpadding="12" cellspacing="0" width="100%">
-                        <thead>
-                            <tr bgcolor="#2c3e50" style="color: white;">
-                                <th>Category</th>
-                                <th>Foreigners</th>
-                                <th>Egyptians</th>
-                            </tr>
-                        </thead>
-                        <tbody align="center">
-                            <tr>
-                                <td><b>Adults</b></td>
-                                <td>260 EGP</td>
-                                <td>55 EGP</td>
-                            </tr>
-                            <tr>
-                                <td><b>Students</b></td>
-                                <td>140 EGP</td>
-                                <td>30 EGP</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </section>
-
-                <section>
-                    <h2>Opening Hours</h2>
-                    <ul>
-                        <li><b>Daily:</b> 08:30 AM to 05:00 PM</li>
-                    </ul>
-                </section>
-
-                <section>
-                    <h2>Official Booking</h2>
-                    <p>To book your tickets, please visit the official website: <a href="https://egymonuments.com/details/LuxorMuseum" target="_blank">Click here to book on Egypt Monuments</a></p>
-                </section>
-
-                <section>
-                    <h2>Location</h2>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3615.123456789!2d32.64472!3d25.7075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x144915b5c3b5c3b5%3A0x1234567890abcdef!2sLuxor%20Museum!5e0!3m2!1sar!2seg!4v1774193099779!5m2!1sar!2seg" width="600" height="450" style="border:0;" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </section>
-
-            </section>
-
-            <section id="islamic" class="page-section" style="display:none;">
-                <button class="back-btn" onclick="showSection('places')">← Back to Places</button>
-                <h1>The Museum of Islamic Art</h1>
-                <hr>
-                <section>
-                    <h2>General Information</h2>
-                    <p>The Museum of Islamic Art in Cairo is one of the largest museums of Islamic art in the world. It houses rare manuscripts, ceramics, woodwork, metalwork and textiles spanning Islamic history from the 7th to the 19th century.</p>
-                </section>
-
-                <section>
-                    <h2>Visitor Details & Ticket Prices (2026)</h2>
-                    <h3>Entry Tickets</h3>
-                    <table border="1" cellpadding="12" cellspacing="0" width="100%">
-                        <thead>
-                            <tr bgcolor="#2c3e50" style="color: white;">
-                                <th>Category</th>
-                                <th>Foreigners</th>
-                                <th>Egyptians</th>
-                            </tr>
-                        </thead>
-                        <tbody align="center">
-                            <tr>
-                                <td><b>Adults</b></td>
-                                <td>200 EGP</td>
-                                <td>40 EGP</td>
-                            </tr>
-                            <tr>
-                                <td><b>Students</b></td>
-                                <td>120 EGP</td>
-                                <td>25 EGP</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </section>
-
-                <section>
-                    <h2>Opening Hours</h2>
-                    <ul>
-                        <li><b>Daily:</b> 09:00 AM to 04:00 PM</li>
-                    </ul>
-                </section>
-
-                <section>
-                    <h2>Official Booking</h2>
-                    <p>To book your tickets, please visit the official website: <a href="http://www.miaegypt.org/" target="_blank">Click here to visit the Museum of Islamic Art website</a></p>
-                </section>
-
-                <section>
-                    <h2>Location</h2>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3455.123456789!2d31.25278!3d30.04472!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x145840b5c3b5c3b5%3A0x1234567890abcdef!2sMuseum%20of%20Islamic%20Art!5e0!3m2!1sar!2seg!4v1774193099779!5m2!1sar!2seg" width="600" height="450" style="border:0;" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </section>
-            </section>
-
-            <section id="coptic" class="page-section" style="display:none;">
-                <button class="back-btn" onclick="showSection('places')">← Back to Places</button>
-                <h1>The Coptic Museum</h1>
-                <hr>
-                <section>
-                    <h2>General Information</h2>
-                    <p>The Coptic Museum in Old Cairo preserves Egypt's Christian heritage with a wide collection of icons, textiles, manuscripts and church artifacts from the Byzantine and Coptic periods.</p>
-                </section>
-
-                <section>
-                    <h2>Visitor Details & Ticket Prices (2026)</h2>
-                    <h3>Entry Tickets</h3>
-                    <table border="1" cellpadding="12" cellspacing="0" width="100%">
-                        <thead>
-                            <tr bgcolor="#2c3e50" style="color: white;">
-                                <th>Category</th>
-                                <th>Foreigners</th>
-                                <th>Egyptians</th>
-                            </tr>
-                        </thead>
-                        <tbody align="center">
-                            <tr>
-                                <td><b>Adults</b></td>
-                                <td>120 EGP</td>
-                                <td>30 EGP</td>
-                            </tr>
-                            <tr>
-                                <td><b>Students</b></td>
-                                <td>70 EGP</td>
-                                <td>20 EGP</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </section>
-
-                <section>
-                    <h2>Opening Hours</h2>
-                    <ul>
-                        <li><b>Daily:</b> 09:00 AM to 05:00 PM</li>
-                    </ul>
-                </section>
-
-                <section>
-                    <h2>Official Booking</h2>
-                    <p>To book your tickets, please visit the official website: <a href="https://egymonuments.gov.eg/en/subportals-group/coptic-museum" target="_blank">Click here to visit the Coptic Museum website</a></p>
-                </section>
-
-                <section>
-                    <h2>Location</h2>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3454.984639085869!2d31.23055!3d30.00563!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1458476863e39e8f%3A0xc2e058446f8f145d!2sCoptic%20Museum!5e0!3m2!1sar!2seg!4v1774193066045!5m2!1sar!2seg" width="600" height="450" style="border:0;" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </section>
-            </section>
-
-            <section id="alexandria" class="page-section" style="display:none;">
-                <button class="back-btn" onclick="showSection('places')">← Back to Places</button>
-                <h1>Alexandria National Museum</h1>
-                <hr>
-                <section>
-                    <h2>General Information</h2>
-                    <p>Alexandria National Museum is a major museum in Egypt that opened in 2003 in an Italian-style palace on Fouad Street. It contains more than 1,800 artifacts illustrating the history of Alexandria from the Pharaonic period through the Ptolemaic, Roman, Byzantine, Islamic, and modern eras. The collection was gathered from leading institutions such as Egyptian Museum, Coptic Museum, and Museum of Islamic Art, along with artifacts recovered from underwater sites. The museum is arranged across three floors, moving chronologically from ancient Egyptian artifacts in the basement to Greco-Roman pieces on the ground floor and later Byzantine, Islamic, and modern exhibits on the upper floor, featuring notable works such as statues of Isis, marble portraits, coins, and a statue of Venus..</p>
-                </section>
-
-                <section>
-                    <h2>Visitor Details & Ticket Prices (2026)</h2>
-                    <h3>Entry Tickets</h3>
-                    <table border="1" cellpadding="12" cellspacing="0" width="100%">
-                        <thead>
-                            <tr bgcolor="#2c3e50" style="color: white;">
-                                <th>Category</th>
-                                <th>Foreigners</th>
-                                <th>Egyptians</th>
-                            </tr>
-                        </thead>
-                        <tbody align="center">
-                            <tr>
-                                <td><b>Adults</b></td>
-                                <td>180 EGP</td>
-                                <td>35 EGP</td>
-                            </tr>
-                            <tr>
-                                <td><b>Students</b></td>
-                                <td>90 EGP</td>
-                                <td>15 EGP</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </section>
-
-                <section>
-                    <h2>Opening Hours</h2>
-                    <ul>
-                        <li><b>Daily:</b> 09:00 AM to 05:00 PM</li>
-                    </ul>
-                </section>
-
-                <section>
-                    <h2>Official Booking</h2>
-                    <p>To book your tickets, please visit the official website: <a href="https://egymonuments.com/details/AlexandriaNationalMuseum" target="_blank">Click here to book on Egypt Monuments</a></p>
-                </section>
-
-                <section>
-                    <h2>Location</h2>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3414.8234567890!2d29.896528!3d31.200092!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14583f6559f3d2a7%3A0x5314a08ead09bd70!2sAlexandria%20National%20Museum!5e0!3m2!1sen!2seg!4v1707000000000" width="600" height="450" style="border:0;" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </section>
-            </section>
-
-            <section id="about" class="page-section" style="display:none;">
-                <h1>About <span class="about-us">Us</span></h1>
-
-                <div class="mission-vision">
-                    <h2>Our Vision</h2>
-                    <p>To become the leading digital gateway that connects the world to Egypt's timeless treasures, making historical information accessible to every visitor and researcher.</p>
-
-                    <h2>Our Mission</h2>
-                    <p>To revive the passion for Egyptian heritage by providing accurate and updated data about museums and archaeological sites, helping tourists and citizens explore Egypt's greatness with ease.</p>
-                </div>
-
-                <hr>
-
-                <div class="website-importance">
-                    <h2>Why Heritage Hub?</h2>
-                    <p>This platform was created to bridge the gap between history and technology. We provide essential details for every traveler:</p>
-                    <ul>
-                        <li>Updated museum schedules and ticket prices.</li>
-                        <li>Direct integration with Google Maps for easy navigation.</li>
-                        <li>Concise historical summaries for each landmark.</li>
-                    </ul>
-                </div>
-
-                <div class="team-footer">
-                    <p>Developed with passion by the <strong>Heritage Hub Team</strong>.</p>
-                </div>
-            </section>
-
-            <section id="contact" class="page-section" style="display:none;">
-                <h1>Contact Us</h1>
-                <p>We are looking forward to hearing from you soon.</p>
-                <div class="contact-container">
-                    <div class="contact-info">
-                        <h3>Get in touch</h3>
-                        <div class="social-links">
-                            <a href="https://www.facebook.com/" target="_blank">f</a>
-                            <a href="https://twitter.com" target="_blank">𝕏</a>
-                        </div>
-                    </div>
-                    <div class="contact-form">
-                        <form action="#" method="post">
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label for="name">Full Name:</label>
-                                    <input type="text" id="name" name="user_name" placeholder="NAME" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="email">Email:</label>
-                                    <input type="email" id="email" name="user_email" placeholder="EMAIL" required>
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label for="phone">Phone:</label>
-                                    <input type="tel" id="phone" name="user_phone" placeholder="PHONE">
-                                </div>
-                                <div class="form-group">
-                                    <label for="address">Address:</label>
-                                    <input type="text" id="address" name="user_address" placeholder="ADDRESS">
-                                </div>
-                            </div>
-                            <div class="form-row full">
-                                <div class="form-group">
-                                    <label for="message">Message:</label>
-                                    <textarea id="message" name="user_message" rows="5" placeholder="MESSAGE" required></textarea>
-                                </div>
-                            </div>
-                            <button type="submit">DONE</button>
-                        </form>
-                    </div>
-                </div>
-            </section>
-        </div>
+            </div>
+        </section>
     </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 Heritage Hub. All rights reserved.</p>
+    </footer>
 
     <script src="script.js"></script>
 </body>

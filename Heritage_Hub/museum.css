@@ -1,0 +1,206 @@
+/* Museum Pages Specific Styles */
+
+.back-btn {
+    background: rgba(255, 255, 255, 0.06);
+    color: var(--text-light);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    padding: 14px 28px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 999px;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+.back-btn:hover {
+    background: var(--light-brown);
+    color: var(--bg-dark);
+    transform: translateY(-2px);
+}
+
+.museum-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+    margin-top: 32px;
+}
+
+@media (min-width: 1100px) {
+    .museum-card.general-info-card {
+        grid-column: span 2;
+    }
+}
+
+.museum-card.location-card {
+    grid-column: span 1;
+}
+
+.museum-card.location-card iframe {
+    height: 220px;
+}
+
+.museum-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 16px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+    transition: transform 0.3s ease, border-color 0.3s ease, background 0.3s ease;
+}
+
+.museum-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(141, 110, 99, 0.8);
+    background: rgba(255, 255, 255, 0.06);
+}
+
+.museum-card h3 {
+    font-size: 1.2rem;
+    color: var(--text-light);
+    margin: 0 0 16px 0;
+    font-family: 'StretchPro', serif;
+}
+
+.museum-card p {
+    color: #d6cfc5;
+    line-height: 1.6;
+    margin-bottom: 16px;
+    font-size: 0.95rem;
+}
+
+.museum-card ul {
+    color: #d6cfc5;
+    line-height: 1.6;
+    margin-bottom: 16px;
+    font-size: 0.95rem;
+}
+
+.museum-card a {
+    color: var(--light-brown);
+    text-decoration: none;
+}
+
+.museum-card a:hover {
+    text-decoration: underline;
+}
+
+.image-button {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    border-radius: 22px;
+    min-height: 180px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+    margin-top: 18px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.image-button::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.12) 0%, rgba(0, 0, 0, 0.72) 100%);
+    mix-blend-mode: multiply;
+}
+
+.image-button span {
+    position: relative;
+    z-index: 1;
+    display: block;
+    padding: 18px 22px;
+}
+
+.image-button span:first-child {
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.image-button__sub {
+    font-size: 0.86rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin-top: 6px;
+}
+
+.image-button:hover {
+    transform: translateY(-2px);
+    border-color: rgba(255, 255, 255, 0.24);
+} 
+
+.museum-card iframe {
+    width: 100%;
+    height: 300px;
+    border: none;
+    border-radius: 8px;
+    margin-top: 16px;
+}
+
+table {
+    width: 100%;
+    max-width: 100%;
+    margin: 16px 0;
+    border-collapse: collapse;
+    border-radius: 14px;
+    overflow: hidden;
+    background: rgba(2, 2, 2, 0.267);
+    border: 1px solid rgba(141, 110, 99, 0.3);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    table-layout: fixed;
+}
+
+.museum-card table {
+    display: block;
+    overflow-x: auto;
+}
+
+table th,
+table td {
+    padding: 10px 12px;
+    text-align: center;
+    border-bottom: 1px solid rgba(141, 110, 99, 0.2);
+    color: #d4d4d4;
+    font-size: 0.85rem;
+    word-wrap: break-word;
+}
+
+table th {
+    font-weight: 600;
+    letter-spacing: 0.4px;
+    background: rgba(88, 64, 64, 0.863);
+}
+
+table thead {
+    background: linear-gradient(135deg, rgba(141, 110, 99, 0.92), rgba(93, 64, 55, 0.5));
+    border-bottom: 2px solid rgba(141, 110, 99, 0.918);
+}
+
+table thead th {
+    color: var(--text-light);
+    font-family: 'StretchPro', serif;
+    font-size: 0.95rem;
+}
+
+table tbody tr {
+    transition: all 0.25s ease;
+}
+
+table tbody tr:nth-child(even) {
+    background: rgba(255, 255, 255, 0.02);
+}
+
+table tbody tr:hover {
+    background: rgba(141, 110, 99, 0.2);
+    border-bottom-color: rgba(141, 110, 99, 0.5);
+}
+
+table tbody tr:last-child td {
+    border-bottom: none;
+}
