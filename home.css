@@ -230,6 +230,10 @@ main > section:first-child .section-title {
     gap: 20px !important;
     margin-left: auto !important;
 }
+body {
+    overflow-x: hidden;
+    width: 100%;
+}
 
 @media (max-width: 980px) {
     .civilization-section {
