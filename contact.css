@@ -4,6 +4,14 @@
     padding: 0;
 }
 
+html, body {
+    overflow-x: hidden !important;
+    position: relative !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
 #contact {
     background: rgba(0, 0, 0, 0.616);
     border: 1px solid rgba(255, 255, 255, 0.18);
