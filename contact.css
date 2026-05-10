@@ -210,3 +210,43 @@ button[type="submit"] {
         font-size: 1rem !important;
     }
 }
+
+@media (max-width: 600px) {
+    /* 1. منع أي عنصر يخرج بره الشاشة نهائياً */
+    html, body {
+        overflow-x: hidden !important;
+        width: 100% !important;
+        position: relative !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    /* 2. تصغير الخطوط الكبيرة اللي بتزق الشاشة */
+    h1 {
+        font-size: 1.8rem !important;
+        word-wrap: break-word !important;
+    }
+
+    /* 3. إجبار الفورم والكونتينر إنهم يلموا نفسهم */
+    .contact-container, #contact, .container, .places-featured {
+        width: 92% !important; /* سيب مسافة أمان */
+        margin-left: auto !important;
+        margin-right: auto !important;
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+        float: none !important;
+        display: block !important;
+    }
+
+    /* 4. التأكد إن مفيش بادنج مخفي في الـ row */
+    .form-row {
+        display: block !important;
+        width: 100% !important;
+    }
+
+    /* 5. أي صورة لازم تكون مطيعة للشاشة */
+    img {
+        max-width: 100% !important;
+        height: auto !important;
+    }
+}
