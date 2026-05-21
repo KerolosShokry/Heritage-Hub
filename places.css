@@ -1,3 +1,18 @@
+.site-header, 
+.topbar {
+    background: transparent !important;
+    background-color: transparent !important;
+    border: none !important;
+    border-bottom: none !important;
+    box-shadow: none !important;
+}
+
+.top-nav {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
 .places-hero {
     display: grid;
     gap: 36px;
@@ -8,6 +23,7 @@
     backdrop-filter: blur(10px);
     max-width: 1180px;
     margin: 0 auto;
+    margin-top: 50px;
 }
 
 .places-page .page-overlay {
@@ -86,6 +102,7 @@
     display: block ;
     -webkit-font-smoothing: antialiased;
 }
+
 .place-card > div {
     gap: 20px !important; 
     height: auto !important;
@@ -139,6 +156,7 @@
     color: var(--text-light);
     margin: 0;
 }
+
 .places-grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -209,6 +227,12 @@
 }
 
 @media (max-width: 760px) {
+    .places-hero {
+        padding: 24px 16px;
+        gap: 24px;
+        margin-top: 30px;
+    }
+    
     .places-featured {
         grid-template-columns: 1fr;
     }

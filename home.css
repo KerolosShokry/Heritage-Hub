@@ -1,3 +1,8 @@
+#home {
+    max-width: 980px;
+    margin: 60px auto;
+    padding: 50px 45px;
+}
 .hero-text {
     text-align: left !important; 
     margin-left: 0 !important;   
@@ -9,14 +14,12 @@
     margin-top: 15px !important;
     font-weight: 300;
 }
-
 .hero-copy {
     display: flex;
     flex-direction: column;
     align-items: flex-start; 
     text-align: left;
 }
-
 .hero-label {
     font-size: 1.3rem !important; 
     letter-spacing: 0.3em !important; 
@@ -34,7 +37,6 @@
     position: relative;
     overflow: hidden;
 }
-
 .civilization-section::before {
     content: '';
     position: absolute;
@@ -46,7 +48,6 @@
     transform: scale(1.1);
     pointer-events: none;
 }
-
 .civilization-section::after {
     content: '';
     position: absolute;
@@ -57,14 +58,12 @@
     background: radial-gradient(circle at center, rgba(200, 180, 150, 0.08), transparent 55%);
     pointer-events: none;
 }
-
 .civilization-container {
     position: relative;
     max-width: 1180px;
     margin: 0 auto;
     padding: 0 24px;
 }
-
 .section-title {
     font-family: 'StretchPro', serif;
     font-size: 4rem;
@@ -79,7 +78,6 @@
     margin-left: auto;
     margin-right: auto;
 }
-
 .section-title::after {
     content: '';
     position: absolute;
@@ -91,12 +89,10 @@
     background: linear-gradient(90deg, transparent, rgba(220, 210, 190, 0.6), transparent);
     border-radius: 1px;
 }
-
 main > section:first-child .section-title {
     font-size: 2.4rem;
     letter-spacing: 0.1em;
 }
-
 .section-subtitle {
     font-size: 1.2rem;
     color: #c8b9a7;
@@ -111,14 +107,12 @@ main > section:first-child .section-title {
     font-weight: 400;
     font-family: 'Coolvetica Rg Cond', sans-serif;
 }
-
 .civilization-content {
     display: block;
     padding: 0;
     max-width: 980px;
     margin: 0 auto;
 }
-
 .main-content {
     background: rgba(16, 12, 10, 0.88);
     border: 1px solid rgba(255, 255, 255, 0.08);
@@ -128,7 +122,6 @@ main > section:first-child .section-title {
     backdrop-filter: blur(8px);
     position: relative;
 }
-
 .main-content::before {
     content: '';
     position: absolute;
@@ -140,7 +133,6 @@ main > section:first-child .section-title {
     background: rgba(255, 255, 255, 0.04);
     pointer-events: none;
 }
-
 .civilization-content p {
     font-size: 1.6rem;
     line-height: 2.5;
@@ -149,16 +141,13 @@ main > section:first-child .section-title {
     letter-spacing: 0.015em;
     font-weight: 400;
 }
-
 .civilization-content p:last-child {
     margin-bottom: 0;
 }
-
 .civilization-content p strong,
 .civilization-content p em {
     color: #f4e9d9;
 }
-
 .highlights,
 .highlights::after,
 .highlights:hover,
@@ -171,14 +160,12 @@ main > section:first-child .section-title {
 .highlights li:hover {
     display: none !important;
 }
-
 .logo-link {
     display: flex;
     align-items: center; 
     text-decoration: none;
     gap: 20px; 
 }
-
 .logo-text {
     font-family: 'StretchPro', sans-serif; 
     font-size: 22px;
@@ -187,12 +174,10 @@ main > section:first-child .section-title {
     letter-spacing: 3px; 
     transition: all 0.3s ease;
 }
-
 .logo-link:hover .logo-text {
     color: #8D6E63; 
     letter-spacing: 5px; 
 }
-
 .site-logo {
     height: 80px;
     width: 80px;
@@ -203,7 +188,6 @@ main > section:first-child .section-title {
     margin-right: 15px;
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
-
 .site-logo:hover {
     transform: scale(1.5) rotate(5deg);
     border-color: #8D6E63; 
@@ -216,13 +200,6 @@ main > section:first-child .section-title {
     padding: 10px 40px !important;
     width: 100% !important;
     box-sizing: border-box !important;
-}
-
-.logo-link {
-    display: flex !important;
-    align-items: center !important;
-    gap: 15px !important;
-    text-decoration: none !important;
 }
 .top-nav {
     display: flex !important;
@@ -239,20 +216,16 @@ body {
     .civilization-section {
         margin: 40px 0 80px;
     }
-
     .section-title {
         font-size: 2.8rem;
     }
-
     .section-subtitle {
         font-size: 1.05rem;
         margin-bottom: 40px;
     }
-
     .main-content {
         padding: 42px 30px;
     }
-
     .civilization-content p {
         font-size: 1.14rem;
         line-height: 2.2;
@@ -264,29 +237,67 @@ body {
         padding: 70px 0 80px;
         margin: 35px 0 60px;
     }
-
     .section-title {
-        font-size: 2.2rem;
+        font-size: 1.8rem !important;
+        letter-spacing: 0.08em !important; 
+        word-break: break-word !important;
+        padding: 0 10px !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
     }
-
+    .section-title::after {
+        width: 140px;
+        bottom: -24px;
+    }
     .section-subtitle {
         font-size: 1rem;
         margin-top: 30px;
         margin-bottom: 32px;
     }
-
     .main-content {
         padding: 30px 22px;
         border-radius: 24px;
     }
-
     .civilization-content p {
         font-size: 1rem;
+        word-wrap: break-word !important;
+        overflow-wrap: break-word !important;
+        hyphens: auto;
     }
-
-    .section-title::after {
-        width: 140px;
-        bottom: -24px;
+    .topbar {
+        flex-direction: column !important;
+        padding: 15px 20px !important;
+        gap: 15px !important;
+    }
+    .top-nav {
+        margin-left: 0 !important;
+        justify-content: center !important;
+        flex-wrap: wrap !important;
+        width: 100% !important;
+        gap: 15px !important;
+    }
+    #home {
+        padding: 30px 20px !important;
+        margin: 20px auto !important;
+    }
+    .hero-text {
+        word-wrap: break-word !important;
+        overflow-wrap: break-word !important;
+        hyphens: auto;
+    }
+    .logo-text {
+        font-size: 18px !important;
+        letter-spacing: 2px !important;
+    }
+    .site-logo {
+        height: 60px !important;
+        width: 60px !important;
+    }
+    .hero-title {
+        font-size: 2.8rem !important;
+        letter-spacing: 0.05em !important;
+        word-break: break-word !important;
+        width: 100% !important;
     }
 }
 
@@ -294,26 +305,35 @@ body {
     .civilization-section {
         margin: 25px 0 40px;
     }
-
-    .section-title {
-        font-size: 1.9rem;
-    }
-
     .section-subtitle {
         font-size: 0.95rem;
         max-width: 100%;
         padding: 0 10px;
     }
-
     .main-content {
         padding: 24px 18px;
     }
-
     .civilization-content p {
         line-height: 1.9;
     }
+    #home {
+        padding: 20px 15px !important;
+    }
+    .top-nav {
+        font-size: 0.9rem !important;
+    }
 }
 
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 2.2rem !important;
+        letter-spacing: 0.02em !important;
+    }
+    .section-title {
+        font-size: 1.5rem !important;
+        letter-spacing: 0.05em !important;
+    }
+}
 
 html, body {
     max-width: 100%;
@@ -321,7 +341,6 @@ html, body {
     margin: 0;
     padding: 0;
 }
-
 * {
     box-sizing: border-box;
 }

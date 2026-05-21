@@ -2,43 +2,43 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Heritage Hub - Places</title>
     <link rel="icon" type="image/png" href="./Assets/favicon.ico">
     <link rel="stylesheet" href="common.css">
     <link rel="stylesheet" href="places.css">
     <link rel="stylesheet" href="header.css">
-    <link rel="icon" type="image/png" sizes="32x32" href="./logo.ico">
-    <link rel="icon" type="image/png" sizes="16x16" href="./logo.ico">
-    <link rel="apple-touch-icon" href="./logo.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/Pics/logo.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/Pics/logo.ico">
+    <link rel="apple-touch-icon" href="./assets/Pics/logo.ico">
     <meta name="google-site-verification" content="rDNeEkD5ZaG2XZMLp-SoA4PHsp2YwhqiQZa2y5IDuEU" />
     <meta name="description" content="Heritage Hub - Egypt's Historical Sites">
     <meta name="keywords" content="Heritage Hub - Egypt heritage in one place" />
 </head>
 <body class="places-page">
 
-<header  class="site-header">
-    <div class="topbar">
-        <div class="logo">
-            <a href="index.html" class="logo-link">
-                <img src="./logo.ico" alt="Heritage Hub Logo" class="site-logo">
-                <span class="logo-text">Heritage Hub</span>
-            </a>
-        </div>
-
-        <nav class="top-nav">
-            <a href="index.html">Home</a>
-            <a href="places.html">Places</a>
-            <a href="about.html">About</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-    </div>
-
     <video autoplay muted loop id="bg-video">
-        <source src="vid01.mp4" type="video/mp4">
+        <source src="./assets/Videos/vid01.mp4" type="video/mp4">
     </video>
     <div class="page-overlay"></div>
-    <section id="places" class="page-section active">
+
+    <header class="site-header">
+        <div class="topbar">
+            <div class="logo">
+                <a href="index.html" class="logo-link">
+                    <img src="./assets/Pics/logo.ico" alt="Heritage Hub Logo" class="site-logo">
+                    <span class="logo-text">Heritage Hub</span>
+                </a>
+            </div>
+
+            <nav class="top-nav">
+                <a href="index.html">Home</a>
+                <a href="places.html">Places</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </header> <section id="places" class="page-section active">
         <div class="places-hero">
             <div class="places-copy">
                 <span class="hero-label">Explore</span>
@@ -46,19 +46,19 @@
                 <p>Navigate through iconic heritage destinations with crisp descriptions, easy access and a modern layout designed for travelers and culture seekers.</p>
                 <a class="hero-btn" href="index.html">Back to Home</a>
             </div>
-<div class="places-featured">
-    <article class="featured-card">
-        <img src="./pic000.jpeg" alt="NMEC">
-        <div class="featured-copy">
-            <span>Heritage Icon</span>
-            <h3>National Museum of Egyptian Civilization</h3>
-            <p>A modern showcase of Egypt's living history, with royal artifacts and immersive exhibits.</p>
-            <a class="place-btn" href="nmec.html">View Details</a>
-        </div>
-    </article>
+            
+            <div class="places-featured">
+                <article class="featured-card">
+                    <img src="./assets/Pics/pic000.jpeg" alt="NMEC">
+                    <div class="featured-copy">
+                        <span>Heritage Icon</span>
+                        <h3>National Museum of Egyptian Civilization</h3>
+                        <p>A modern showcase of Egypt's living history, with royal artifacts and immersive exhibits.</p>
+                        <a class="place-btn" href="nmec.html">View Details</a>
+                    </div>
                 </article>
                 <article class="featured-card">
-                    <img src="./pic07.jpeg" alt="Grand Egyptian Museum">
+                    <img src="./assets/Pics/pic07.jpeg" alt="Grand Egyptian Museum">
                     <div class="featured-copy">
                         <span>Must Visit</span>
                         <h3>Grand Egyptian Museum</h3>
@@ -66,8 +66,9 @@
                         <a class="place-btn" href="gem.html">View Details</a>
                     </div>
                 </article>
+
                 <article class="featured-card">
-                    <img src="./pic06.jpeg" alt="The Luxor Museum">
+                    <img src="./assets/Pics/pic06.jpeg" alt="The Luxor Museum">
                     <div class="featured-copy">
                         <span>Historic Collection</span>
                         <h3>The Luxor Museum</h3>
@@ -76,55 +77,56 @@
                     </div>
                 </article>
 
-<article class="featured-card">
-        <img src="./pic0000.jpeg" alt="Sharm Museum">
-        <div class="featured-copy">
-            <span>Coastal Heritage</span>
-            <h3>Sharm El Sheikh Museum</h3>
-            <p>South Sinai museum presenting ancient Egyptian civilization and unique heritage.</p>
-            <a class="place-btn" href="sharm.html">View Details</a>
-        </div>
-    </article>
+                <article class="featured-card">
+                    <img src="./assets/Pics/pic0000.jpeg" alt="Sharm Museum">
+                    <div class="featured-copy">
+                        <span>Coastal Heritage</span>
+                        <h3>Sharm El Sheikh Museum</h3>
+                        <p>South Sinai museum presenting ancient Egyptian civilization and unique heritage.</p>
+                        <a class="place-btn" href="sharm.html">View Details</a>
+                    </div>
+                </article>
 
-            <article class="featured-card">
-                <img class="place-card-image" src="./pic08.jpeg" alt="The Egyptian Museum">
-                <div class="featured-copy">
-                    <span>Pharaonic Treasures</span>
-                    <h3>The Egyptian Museum</h3>
-                    <p>Historic Cairo museum near Tahrir Square, home to one of the world’s richest collections of Pharaonic treasures.</p>
-                </div>
-                <a class="place-btn" href="egyptian.html">View Details</a>
-            </article>
+                <article class="featured-card">
+                    <img class="place-card-image" src="./assets/Pics/pic08.jpeg" alt="The Egyptian Museum">
+                    <div class="featured-copy">
+                        <span>Pharaonic Treasures</span>
+                        <h3>The Egyptian Museum</h3>
+                        <p>Historic Cairo museum near Tahrir Square, home to one of the world’s richest collections of Pharaonic treasures.</p>
+                        <a class="place-btn" href="egyptian.html">View Details</a>
+                    </div>
+                </article>
 
-            <article class="featured-card">
-                <img class="place-card-image" src="./pic0.jpeg" alt="Museum of Islamic Art">
-                <div class="featured-copy">
-                    <span>Art & Faith</span>
-                    <h3>The Museum of Islamic Art</h3>
-                    <p>Largest Islamic art museum in the world, presenting treasures from Egypt, the Arabian Peninsula, Andalusia and beyond.</p>
-                </div>
-                <a class="place-btn" href="islamic.html">View Details</a>
-            </article>
+                <article class="featured-card">
+                    <img class="place-card-image" src="./assets/Pics/pic0.jpeg" alt="Museum of Islamic Art">
+                    <div class="featured-copy">
+                        <span>Art & Faith</span>
+                        <h3>The Museum of Islamic Art</h3>
+                        <p>Largest Islamic art museum in the world, presenting treasures from Egypt, the Arabian Peninsula, Andalusia and beyond.</p>
+                        <a class="place-btn" href="islamic.html">View Details</a>
+                    </div>
+                </article>
 
-            <article class="featured-card">
-                <img class="place-card-image" src="./pic00.jpeg" alt="The Coptic Museum">
-                <div class="featured-copy">
-                    <span>Sacred Heritage</span>
-                    <h3>The Coptic Museum</h3>
-                    <p>Unique collection of Coptic manuscripts, icons, woodwork and ancient religious art housed in Old Cairo.</p>
-                </div>
-                <a class="place-btn" href="coptic.html">View Details</a>
-            </article>
+                <article class="featured-card">
+                    <img class="place-card-image" src="./assets/Pics/pic00.jpeg" alt="The Coptic Museum">
+                    <div class="featured-copy">
+                        <span>Sacred Heritage</span>
+                        <h3>The Coptic Museum</h3>
+                        <p>Unique collection of Coptic manuscripts, icons, woodwork and ancient religious art housed in Old Cairo.</p>
+                        <a class="place-btn" href="coptic.html">View Details</a>
+                    </div>
+                </article>
 
-            <article class="featured-card">
-                <img class="place-card-image" src="./pic09.jpeg" alt="Alexandria National Museum">
-                <div class="featured-copy">
-                    <span>Mediterranean Legacy</span>
-                    <h3>Alexandria National Museum</h3>
-                    <p>Modern museum in Alexandria displaying ancient artifacts, royal statues and the city’s Mediterranean heritage.</p>
-                </div>
-                <a class="place-btn" href="alexandria.html">View Details</a>
-            </article>
+                <article class="featured-card">
+                    <img class="place-card-image" src="./assets/Pics/pic09.jpeg" alt="Alexandria National Museum">
+                    <div class="featured-copy">
+                        <span>Mediterranean Legacy</span>
+                        <h3>Alexandria National Museum</h3>
+                        <p>Modern museum in Alexandria displaying ancient artifacts, royal statues and the city’s Mediterranean heritage.</p>
+                        <a class="place-btn" href="alexandria.html">View Details</a>
+                    </div>
+                </article>
+            </div>
         </div>
     </section>
 
@@ -135,4 +137,3 @@
     <script src="script.js"></script>
 </body>
 </html>
-
