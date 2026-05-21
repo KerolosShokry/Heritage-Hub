@@ -20,6 +20,9 @@ body.contact-page .site-header .topbar .top-nav a:hover {
     border-radius: 30px;
     backdrop-filter: blur(8px);
     box-shadow: 0 36px 100px rgba(0, 0, 0, 0.38);
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .contact-page .page-overlay {
@@ -50,23 +53,29 @@ body.contact-page .site-header .topbar .top-nav a:hover {
     flex-wrap: wrap;
     background: transparent;
     border: none;
-    border-radius: 0;
     padding: 0;
-    box-shadow: none;
 }
 
-.contact-info {
+.contact-info, .contact-form {
     flex: 1;
     min-width: 280px;
 }
 
-.contact-info h3 {
+.contact-info h3, .contact-form h3 {
     font-family: 'StretchPro', serif;
-    font-size: 1.6rem;
     color: #806e6ebe;
     margin-bottom: 20px;
     text-transform: uppercase;
+}
+
+.contact-info h3 {
+    font-size: 1.6rem;
     letter-spacing: 3px;
+}
+
+.contact-form h3 {
+    font-size: 1.3rem;
+    letter-spacing: 2px;
 }
 
 .contact-info p {
@@ -99,20 +108,6 @@ body.contact-page .site-header .topbar .top-nav a:hover {
     color: var(--bg-dark);
 }
 
-.contact-form {
-    flex: 1;
-    min-width: 280px;
-}
-
-.contact-form h3 {
-    font-family: 'StretchPro', serif;
-    font-size: 1.3rem;
-    color: #806e6ebe;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
-
 .form-row {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -128,13 +123,11 @@ body.contact-page .site-header .topbar .top-nav a:hover {
     font-size: 1.15rem;
     display: block;
     margin-bottom: 10px;
-    letter-spacing: 0.05em;
     font-weight: bold;
     color: #d4d4d4;
 }
 
-.form-group input,
-.form-group textarea {
+.form-group input, .form-group textarea {
     width: 100%;
     padding: 12px 15px;
     border: 1px solid rgba(255, 255, 255, 0.18);
@@ -143,22 +136,6 @@ body.contact-page .site-header .topbar .top-nav a:hover {
     color: #d4d4d4;
     font-family: 'Coolvetica Rg Cond', sans-serif;
     font-size: 1.2rem;
-}
-
-.form-group input::placeholder,
-.form-group textarea::placeholder {
-    color: #707070;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-.form-group input:focus,
-.form-group textarea:focus {
-    font-size: 1.1rem;
-    letter-spacing: 1.5px;
-    outline: none;
-    border-color: var(--light-brown);
-    background: rgba(0, 0, 0, 0.9);
 }
 
 button[type="submit"] {
@@ -178,66 +155,77 @@ button[type="submit"] {
     font-weight: bold;
     transition: all 0.3s ease;
     cursor: pointer;
-    text-decoration: none;
-}
-
-button[type="submit"]:hover {
-    background: var(--light-brown);
-    color: var(--bg-dark);
-    transform: translateY(-2px);
-    border-color: var(--light-brown);
 }
 
 @media (max-width: 980px) {
     #contact {
-        padding: 40px 30px;
+        padding: 30px 15px !important;
+        margin: 10px !important;
+        width: calc(100% - 20px) !important;
+        border-radius: 20px;
     }
 
     .contact-container {
-        flex-direction: column;
-        gap: 24px;
+        flex-direction: column !important;
+        gap: 20px !important;
+        width: 100% !important;
     }
 
-    .contact-info,
-    .contact-form {
-        width: 100%;
+    .contact-info, .contact-form {
+        width: 100% !important;
+        min-width: 100% !important;
+        flex: none !important;
+    }
+
+
+    .contact-info {
+        text-align: center;
+        padding: 0 !important;
+    }
+
+    .social-links {
+        justify-content: center !important;
     }
 
     .form-row {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr !important;
+    }
+    
+
+    footer, .footer {
+        width: 100% !important;
+        padding: 10px !important;
+        margin: 0 !important;
     }
 }
 
-@media (max-width: 760px) {
-    #contact {
-        padding: 32px 24px;
-    }
 
+@media (max-width: 480px) {
     #contact h1 {
-        font-size: 2.4rem;
+        font-size: 1.8rem !important;
+        letter-spacing: 1px !important;
     }
-
-    .social-links {
-        justify-content: center;
-    }
-
-    .form-group input,
-    .form-group textarea {
-        font-size: 0.96rem;
-    }
-
+    
     button[type="submit"] {
-        width: 100%;
+        padding: 15px !important;
+        font-size: 1rem !important;
     }
 }
 
-@media (max-width: 620px) {
-    #contact {
-        padding: 24px 18px;
+@media (max-width: 600px) {
+    /* 1. منع أي عنصر يخرج بره الشاشة نهائياً */
+    html, body {
+        overflow-x: hidden !important;
+        width: 100% !important;
+        position: relative !important;
+        margin: 0 !important;
+        padding: 0 !important;
     }
 
-    .social-links {
-        gap: 14px;
+    /* 2. تصغير الخطوط الكبيرة اللي بتزق الشاشة */
+    h1 {
+        font-size: 1.8rem !important;
+        word-wrap: break-word !important;
     }
 }
 
