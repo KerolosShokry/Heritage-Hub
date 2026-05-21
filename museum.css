@@ -224,4 +224,97 @@ html, body {
 }
 
 
+.table-responsive {
+    width: 100%;
+    overflow-x: auto;
+    margin: 20px 0;
+    display: block; /* ده اللي هيخلي الجدول يتفك من الـ flex */
+}
 
+.table-responsive table {
+    width: 100%;
+    min-width: 500px;
+    border-collapse: collapse;
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(141, 110, 99, 0.4);
+    border-radius: 12px;
+}
+/* الكلاس الذي يحتوى الجدول لضمان التجاوب */
+.table-responsive {
+    width: 100%;
+    overflow-x: auto;
+    margin: 20px 0;
+    display: block;
+}
+
+/* التنسيق الجمالي للجدول (نفس ألوانك وتصميمك) */
+table {
+    width: 100%;
+    min-width: 500px; /* يضمن عدم انضغاط الجدول */
+    border-collapse: collapse;
+    background: rgba(2, 2, 2, 0.35);
+    border: 1px solid rgba(141, 110, 99, 0.35);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+th, td {
+    padding: 14px 18px;
+    text-align: center;
+    border-bottom: 1px solid rgba(141, 110, 99, 0.25);
+    color: #f4eae1;
+    font-size: 1.15rem;
+    font-weight: bold;
+}
+
+thead {
+    background: linear-gradient(135deg, rgba(141, 110, 99, 0.95), rgba(93, 64, 55, 0.7));
+}
+
+th {
+    color: #ffffff;
+    font-family: 'StretchPro', serif;
+    text-transform: uppercase;
+}
+
+tbody tr:nth-child(even) {
+    background: rgba(255, 255, 255, 0.02);
+}
+
+/* تنسيق الجدول ليتطابق مع ألوان الكاردات */
+.table-responsive table {
+    width: 100%;
+    min-width: 500px;
+    border-collapse: collapse;
+    /* نفس خلفية الكارد */
+    background: rgba(255, 255, 255, 0.03); 
+    /* نفس إطار الكارد */
+    border: 1px solid rgba(255, 255, 255, 0.06); 
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+}
+
+.table-responsive th, .table-responsive td {
+    padding: 16px;
+    text-align: center;
+    border-bottom: 1px solid rgba(141, 110, 99, 0.3);
+    color: #f4eae1; /* لون النص المعتمد في الـ p */
+    font-size: 1.1rem;
+}
+
+.table-responsive thead {
+    /* لون الهيدر ليتماشى مع التباين */
+    background: rgba(141, 110, 99, 0.2);
+}
+
+.table-responsive th {
+    font-family: 'StretchPro', serif;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+.table-responsive tbody tr:nth-child(even) {
+    background: rgba(255, 255, 255, 0.02);
+}
