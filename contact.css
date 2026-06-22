@@ -250,12 +250,11 @@ body.contact-page #contact {
     }
 }
 
-/* شاشات الموبايل (760px وأقل) */
 @media (max-width: 760px) {
     body.contact-page #contact {
         margin: 100px auto 40px auto !important;
-        padding: 32px 24px !important;
-        width: 90% !important;
+        padding: 30px 15px !important; /* 👈 قللنا الهامش الداخلي جداً عشان نوسع للفورم */
+        width: 95% !important;        /* 👈 خليناها تفرش لـ 95% من عرض الشاشة بديل 90% */
     }
 
     #contact h1 {
@@ -263,25 +262,20 @@ body.contact-page #contact {
         letter-spacing: 2px !important;
     }
 
-    .social-links {
-        justify-content: center;
-    }
-
+    /* تكبير حقول الإدخال لتملأ المساحة الجديدة بالكامل */
     .form-group input,
     .form-group textarea {
-        font-size: 0.96rem;
-    }
-
-    button[type="submit"] {
-        width: 100%;
+        width: 100% !important;
+        box-sizing: border-box !important;
     }
 }
 
-/* الشاشات الصغيرة جداً (480px وأقل) */
+/* الشاشات الصغيرة جداً والموبايلات الضيقة (480px وأقل) */
 @media (max-width: 480px) {
     body.contact-page #contact {
-        margin: 90px auto 30px auto !important;
-        padding: 24px 16px !important;
+        margin: 80px auto 30px auto !important;
+        padding: 25px 10px !important; /* 👈 هامش أقل يمين وشمال للموبايلات الصغيرة */
+        width: 96% !important;
     }
 
     #contact h1 {
