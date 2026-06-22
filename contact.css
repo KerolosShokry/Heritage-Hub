@@ -250,32 +250,39 @@ body.contact-page #contact {
     }
 }
 
+/* شاشات الموبايل (760px وأقل) */
 @media (max-width: 760px) {
+    /* تأكيد سنترة العنصر الأب اللي شايل السيكشن */
+    body.contact-page {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: flex-start !important;
+    }
+
     body.contact-page #contact {
         margin: 100px auto 40px auto !important;
-        padding: 30px 15px !important; /* 👈 قللنا الهامش الداخلي جداً عشان نوسع للفورم */
-        width: 95% !important;        /* 👈 خليناها تفرش لـ 95% من عرض الشاشة بديل 90% */
+        padding: 30px 15px !important;
+        width: 92% !important; /* تقليل النسبة سنة بسيطة عشان نسيب مسافة متساوية يمين وشمال */
+        max-width: 92% !important;
+        display: block !important;
+        float: none !important;
     }
 
     #contact h1 {
         font-size: 2.2rem !important;
         letter-spacing: 2px !important;
-    }
-
-    /* تكبير حقول الإدخال لتملأ المساحة الجديدة بالكامل */
-    .form-group input,
-    .form-group textarea {
-        width: 100% !important;
-        box-sizing: border-box !important;
+        text-align: center !important;
     }
 }
 
 /* الشاشات الصغيرة جداً والموبايلات الضيقة (480px وأقل) */
 @media (max-width: 480px) {
     body.contact-page #contact {
-        margin: 80px auto 30px auto !important;
-        padding: 25px 10px !important; /* 👈 هامش أقل يمين وشمال للموبايلات الصغيرة */
-        width: 96% !important;
+        margin: 90px auto 30px auto !important;
+        padding: 25px 12px !important;
+        width: 92% !important;
+        max-width: 92% !important;
     }
 
     #contact h1 {
