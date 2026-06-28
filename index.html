@@ -70,7 +70,14 @@
     <footer class="site-footer">
         <p>&copy; 2026 Heritage Hub. All rights reserved.</p>
     </footer>
-
+    <script>
+        // التأكد إن المستخدم داخل من رابط Netlify القديم
+if (window.location.hostname.includes('netlify.app')) {
+    // استبدال دومين نتليفاي بدومين فيرسيل الجديد مع الحفاظ على اسم الصفحة (المسار)
+    const newLocation = window.location.href.replace('heritage-hub-eg.netlify.app', 'heritage-hub-eg.vercel.app');
+    window.location.replace(newLocation);
+}
+    </script>
     <script src="script.js"></script>
 </body>
 </html>
