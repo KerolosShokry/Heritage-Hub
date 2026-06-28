@@ -31,3 +31,9 @@ document.addEventListener('DOMContentLoaded', () => {
     addScrollAnimations();
     videoEffects();
 });
+// التأكد إن المستخدم داخل من رابط Netlify القديم
+if (window.location.hostname.includes('netlify.app')) {
+    // استبدال دومين نتليفاي بدومين فيرسيل الجديد مع الحفاظ على اسم الصفحة (المسار)
+    const newLocation = window.location.href.replace('heritage-hub-eg.netlify.app', 'heritage-hub-eg.vercel.app');
+    window.location.replace(newLocation);
+}
