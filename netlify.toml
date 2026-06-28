@@ -2,4 +2,5 @@
   from = "/*"
   to = "https://heritage-hub-eg.vercel.app/:splat"
   status = 301
-  force = true
+  force = false
+  
